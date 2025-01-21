@@ -1,4 +1,3 @@
 [build]
   base = "/"
-  command = "./build.sh"
   publish = "doc/api"
