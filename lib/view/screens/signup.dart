@@ -4,20 +4,31 @@ import 'package:smarteco/view/widgets/Custom_Text_field.dart';
 import '../../viewmodels/signup_viewmodel.dart';
 import '../../models/user.dart';
 
+///page d'inscription de l'utilisateur contenant plusieurs champs à remplir comme le nom , prénom, ville, etc
+
 class SignupScreen extends StatefulWidget {
   @override
   _SignupScreenState createState() => _SignupScreenState();
 }
 
 class _SignupScreenState extends State<SignupScreen> {
+  /// Clé globale pour gérer l'état du formulaire.
   final _formKey = GlobalKey<FormState>();
+  ///Controleur du champs Nom
   final _nameController = TextEditingController();
+  ///Controleur du champs prénom
   final _surnameController = TextEditingController();
+  ///Controleur du champs date d'anniversaire
   final _birthDateController = TextEditingController();
+  ///Controleur du champs Ville
   final _cityController = TextEditingController();
+  ///Controleur du champs Profession de l'utilisateur
   final _professionController = TextEditingController();
+  ///Controleur du champs email
   final _emailController = TextEditingController();
+  ///Controleur du champs mot de passe
   final _passwordController = TextEditingController();
+  ///Controleur du champs Confirmation du mot de passe
   final _confirmPasswordController = TextEditingController();
 
   @override

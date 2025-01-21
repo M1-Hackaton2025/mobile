@@ -1,3 +1,5 @@
+///Contient les information de l'utilisateur pour la base de donnée
+
 class User {
   final String name;
   final String surname;

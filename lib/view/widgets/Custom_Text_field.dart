@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
+///Création d'un Widget pour la gestion des champs de connexion et de d'inscription
+
 class CustomTextField extends StatelessWidget {
+  ///Variable Contenant le nom du champs
   final String labelText;
+  ///Variable de controle de texte
   final TextEditingController controller;
+  ///Variable de mot de passe pour soit afficher ou nom le text lorsqu'il sagit d'un mot de passe
   final bool isPassword; // Indique si le champ est un MDP
 
+  ///Constructeur du Widget créé
   const CustomTextField({
     Key? key,
     required this.labelText,

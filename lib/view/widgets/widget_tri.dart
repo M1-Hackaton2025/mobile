@@ -1,24 +1,14 @@
 import 'package:flutter/material.dart';
 
-///Création d'un Widget pour afficher les statistiques de la semaine de l'utilisateur
+///Création d'un Widget pour l'affichage du tri a faire sur le produit scanner
 
-class RecyclingInfoWidget extends StatelessWidget {
-  ///variable pour le chemin vers l'image
+class Widget_tri extends StatelessWidget {
+  ///Variable représentant le chemin vers l'image correspondant au tri à faire
   final String imagePath;
-  ///variable du nombre de déchet recyclé
-  final int count;
-  ///variable de la moyenne de déchet
-  final int average;
+  ///Variable correspondant au texte à affiché par rapport à l'image
+  final String corb;
 
-  ///Constructeur du Widget créé
-  const RecyclingInfoWidget({
-    Key? key,
-    required this.imagePath,
-    required this.count,
-    required this.average,
-  }) : super(key: key);
-
-  @override
+  const Widget_tri ({Key? key, required this.imagePath, required this.corb}): super (key: key);
   Widget build(BuildContext context) {
     return Row(
       children: [
@@ -41,22 +31,17 @@ class RecyclingInfoWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '$count déchets recyclés', // Texte principal
+              '$corb', // Texte principal
               style: const TextStyle(
                 fontSize: 16.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text(
-              'contre $average en moyenne', // Texte secondaire
-              style: const TextStyle(
-                fontSize: 14.0,
-                color: Colors.grey, // Couleur gris clair
-              ),
-            ),
           ],
         ),
+        SizedBox(height: 15,)
       ],
     );
   }
+
 }

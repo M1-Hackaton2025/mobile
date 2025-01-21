@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../models/user.dart';
 
+///Modèle d'affiche d'erreur du Mot de passe
+
 class SignupViewModel extends ChangeNotifier {
   String? errorMessage;
 

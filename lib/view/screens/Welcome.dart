@@ -1,8 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:smarteco/view/widgets/RecyclingInfoWidget.dart';
 import 'package:smarteco/view/widgets/TabProduct.dart';
+import 'package:simple_barcode_scanner/simple_barcode_scanner.dart';
 
-class WelcomeScreen extends StatelessWidget {
+///Page Home qui surviens après une connexion ou une création de compte de l'utilisateur
+
+class WelcomeScreen extends StatefulWidget {
+  const WelcomeScreen({super.key});
+  @override
+  State<StatefulWidget> createState() {
+    return WelcomState();
+  }
+}
+
+class WelcomState extends State<WelcomeScreen> {
+  ///Variable permettant le stockage du code barre scanné
+  String result = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,12 +64,20 @@ class WelcomeScreen extends StatelessWidget {
             SizedBox(height: 10),
             Text("ou", textAlign: TextAlign.center,),
             SizedBox(height: 10),
+
+            // Code barre Scanne
+            ///Champs de scan du code barre avec le stockage dans la variable res
             SizedBox(
               width: 200,
               height: 40,
               child: ElevatedButton(
-              onPressed: () {
-              // Action du bouton ici
+              onPressed: () async {
+                String ? res = await SimpleBarcodeScanner.scanBarcode(context, delayMillis: 2000,
+                cameraFace: CameraFace.front,);
+                setState(() {
+                  result = res as String;
+                });
+
               },
               child: Text('Scanner le code barre', style: TextStyle(color: Colors.white),),
               style: ElevatedButton.styleFrom(
@@ -71,7 +92,7 @@ class WelcomeScreen extends StatelessWidget {
 
             // Statistiques sur les déchets
             RecyclingInfoWidget(
-              imagePath: 'lib/assets/logo.png', // Chemin de l'image
+              imagePath: 'lib/assets/trap_yellow.png', // Chemin de l'image
               count: 10, // Nombre de déchets recyclés
               average: 5, // Moyenne
             ),
@@ -79,7 +100,7 @@ class WelcomeScreen extends StatelessWidget {
 
 
             RecyclingInfoWidget(
-              imagePath: 'lib/assets/logo.png', // Chemin de l'image
+              imagePath: 'lib/assets/group.png', // Chemin de l'image
               count: 10, // Nombre de déchets recyclés
               average: 5, // Moyenne
             ),

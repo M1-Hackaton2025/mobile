@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:smarteco/view/widgets/Custom_Text_field.dart';
 
+///Page de Connexion de l'utilisateur avec l'appel des variables
+///Cette page permet au utilisateur de remplir des champs comme "Email" et "Mot de passe" pour se connecter à l'application
+
 class LoginScreen extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -8,7 +11,9 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
+  /// _emailController pour l'email utilisateur
   final _emailController = TextEditingController();
+  /// _passwordController pour le MDP
   final _passwordController = TextEditingController();
 
   @override
