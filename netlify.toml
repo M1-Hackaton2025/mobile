@@ -1,5 +1,9 @@
 [build]
-  publish = "doc/api"   # Dossier à déployer
+  base = "/"
+  publish = "doc/api"
 
 [build.environment]
   FLUTTER_VERSION = "stable"  # Si vous utilisez Flutter
+
+[[plugins]]
+  package = "netlify-plugin-dart"
