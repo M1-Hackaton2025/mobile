@@ -1,0 +1,6 @@
+[build]
+  command = "dart doc"  # Commande pour générer la documentation
+  publish = "doc/api"   # Dossier à déployer
+
+[build.environment]
+  FLUTTER_VERSION = "stable"  # Si vous utilisez Flutter
