@@ -62,13 +62,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(height: 33,),
                   ElevatedButton(
                     onPressed: () {
-                      if (_formKey.currentState!.validate()) {
+                      /*if (_formKey.currentState!.validate()) {
                         // Logique de connexion
                         print("Email : ${_emailController.text}");
                         print("Mot de passe : ${_passwordController.text}");
 
                         Navigator.pushNamed(context, '/welcome');
-                      }
+                      }*/
+                      Navigator.pushNamed(context, '/welcome');
+
                     },
                     style: ElevatedButton.styleFrom(
                       minimumSize: Size(150, 50), // Largeur maximale, hauteur 50px

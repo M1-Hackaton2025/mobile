@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 ///Création d'un Widget pour afficher les statistiques de la semaine de l'utilisateur
 
@@ -29,7 +30,7 @@ class RecyclingInfoWidget extends StatelessWidget {
             color: Colors.white, // Fond blanc autour de l'image
             borderRadius: BorderRadius.circular(12.0), // Bordures arrondies
           ),
-          child: Image.asset(
+          child: SvgPicture.asset(
             imagePath,
             width: 42.0, // Largeur de l'image
             height: 42.0, // Hauteur de l'image

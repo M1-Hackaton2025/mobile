@@ -120,8 +120,8 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                   SizedBox(height: 25),
                   ElevatedButton(
-                    onPressed: () async {
-                      if (_formKey.currentState!.validate()) {
+                    onPressed: () /*async*/ {
+                      /*if (_formKey.currentState!.validate()) {
                         final user = User(
                           name: _nameController.text,
                           surname: _surnameController.text,
@@ -137,8 +137,9 @@ class _SignupScreenState extends State<SignupScreen> {
                             content: Text('Inscription réussie'),),
                           );
                         }
-                        Navigator.pushNamed(context, '/welcome');
-                      }
+                      }*/
+                      Navigator.pushNamed(context, '/welcome');
+
                     },style: ElevatedButton.styleFrom(
                     minimumSize: Size(150, 50), // Largeur maximale, hauteur 50px
                     backgroundColor: Color(0xFF2D5FCB),

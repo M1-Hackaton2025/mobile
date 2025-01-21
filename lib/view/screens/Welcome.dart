@@ -92,7 +92,7 @@ class WelcomState extends State<WelcomeScreen> {
 
             // Statistiques sur les déchets
             RecyclingInfoWidget(
-              imagePath: 'lib/assets/trap_yellow.png', // Chemin de l'image
+              imagePath: 'lib/assets/Group27.svg', // Chemin de l'image
               count: 10, // Nombre de déchets recyclés
               average: 5, // Moyenne
             ),
@@ -100,7 +100,7 @@ class WelcomState extends State<WelcomeScreen> {
 
 
             RecyclingInfoWidget(
-              imagePath: 'lib/assets/group.png', // Chemin de l'image
+              imagePath: 'lib/assets/Group26.svg', // Chemin de l'image
               count: 10, // Nombre de déchets recyclés
               average: 5, // Moyenne
             ),
@@ -108,7 +108,7 @@ class WelcomState extends State<WelcomeScreen> {
 
 
             RecyclingInfoWidget(
-              imagePath: 'lib/assets/logo.png', // Chemin de l'image
+              imagePath: 'lib/assets/Group29.svg', // Chemin de l'image
               count: 10, // Nombre de déchets recyclés
               average: 5, // Moyenne
             ),
