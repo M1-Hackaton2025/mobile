@@ -1,9 +1,4 @@
 [build]
   base = "/"
+  command = "./build.sh"
   publish = "doc/api"
-
-[build.environment]
-  FLUTTER_VERSION = "stable"  # Si vous utilisez Flutter
-
-[[plugins]]
-  package = "netlify-plugin-dart"
